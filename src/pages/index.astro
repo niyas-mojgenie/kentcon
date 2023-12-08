@@ -1,0 +1,305 @@
+---
+import Footer from "../components/Footer.astro";
+import OurTeamCard from "../components/OurTeamCard.astro";
+import SpeakersCard from "../components/SpeakersCard.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Kentcon">
+    <!-- hero -->
+    <div class="intro relative">
+        <div class="intro-slideshow">
+            <img
+                src="https://calicuttradecentre.in/wp-content/themes/custom-theme/images/CTC-Building-3.jpg"
+            />
+            <img
+                src="https://calicuttradecentre.in/wp-content/themes/custom-theme/images/CTC-Building-2.jpg"
+            />
+            <img
+                src="https://media2.thrillophilia.com/images/photos/000/110/659/original/1492266066_Calicutbeach_choosetocount.JPG?w=1400&h=320&dpr=1.0%201x,%20https://media2.thrillophilia.com/images/photos/000/110/659/original/1492266066_Calicutbeach_choosetocount.JPG?w=1400&h=320&dpr=1.5%202x"
+            />
+        </div>
+        <div
+            class="bg-[#00000080] max-w-max p-[25px] text-white absolute bottom-[70px] left-[10px] right-[10px] md:left-[50px] rounded-[25px]"
+        >
+            <p class="font-bold text-[32px] max-w-[450px] mb-5">KENTCON 2024</p>
+            <p class="font-light text-[24px] mb-5">
+                Calicut Trade Centre, Sarovaram Bio Park Road, <br /> Kozhikode,
+                Kerala
+            </p>
+            <p class="font-bold mb-3">23 - 26th Sep 2024</p>
+            <p class="max-w-[400px] mb-5">
+                Kencone's 30 years history, the congress venue is south India's
+                largest trade centre
+            </p>
+            <button
+                class="bg-[#39A7FF] hover:bg-[#87C4FF] px-[15px] py-[10px] rounded font-medium text-[18px]"
+                >Register Now</button
+            >
+        </div>
+        <div
+            class="bg-[#00000080] absolute bottom-[0] right-[20px] px-[20px] py-[15px] rounded-tl-[25px] rounded-tr-[25px]"
+        >
+            <p class="font-black text-white">
+                Starts in :
+                <span id="timer"></span>
+            </p>
+        </div>
+    </div>
+    <!-- about -->
+
+    <div
+        class="bg-[#E0F4FF] p-[25px] md:p-[50px] text-18 flex-column lg:flex items-start justify-between"
+    >
+        <div class="max-w-[750px] w-full">
+            <h2 class="font-black text-[39px] mb-5">About Kentcon 2024</h2>
+            <p class="mb-5">
+                Welcome to the Kentcon: International Conference on ENT: Head
+                and Neck Surgery 2024, a prestigious gathering uniting ENT
+                doctors, Otolaryngologists, Audiologists, Academicians,
+                Researchers, and professionals worldwide. Set against the
+                backdrop of Kent, [Country], our upcoming conference promises an
+                enriching experience, exploring the forefront of innovations and
+                clinical advancements in Ear, Nose, and Throat (ENT) care.
+            </p>
+            <p class="mb-5">
+                Scheduled to take place from [Insert Conference Dates], at
+                [Insert Venue], Kentcon is not just an event; it's a
+                collaborative platform designed to propel knowledge exchange and
+                professional growth. The conference will feature keynote
+                presentations from renowned experts, oral talks on cutting-edge
+                research, engaging poster and video presentations, as well as
+                insightful exhibitions showcasing the latest tools and
+                techniques in the field.
+            </p>
+            <button
+                class="bg-[#39A7FF] text-white hover:bg-[#87C4FF] p-[15px] rounded font-medium text-[18px]"
+                >Know More</button
+            >
+        </div>
+        <div class="container collage1">
+            <div class="grid-container">
+                <div class="item item1">
+                    <img
+                        class="collage-img"
+                        src="https://content3.jdmagicbox.com/comp/kozhikode/x1/0495px495.x495.220107153609.a4x1/catalogue/calicut-trade-centre-eranhipalam-kozhikode-auditoriums-7996q4d5p1.jpg"
+                        alt="image"
+                    />
+                </div>
+                <div class="item item2">
+                    <img
+                        class="collage-img"
+                        src="data:image/jpeg;base64,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"
+                        alt="image"
+                    />
+                </div>
+                <div class="item item3">
+                    <img
+                        class="collage-img"
+                        src="https://qph.cf2.quoracdn.net/main-qimg-13fe54af750bc919f698ec9f0078b3d8-lq"
+                        alt="image"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- speakers -->
+    <div class="bg-white p-[50px]">
+        <div class="mb-10">
+            <h3 class="font-black text-[39px] text-center mb-5">Speakers</h3>
+            <p class="text-[18px] text-center">
+                Empowering Tomorrow through Enlightened Discourse.
+            </p>
+
+            <div class="flex flex-wrap gap-10 justify-center mt-10">
+                <SpeakersCard
+                    img="https://i0.wp.com/www.thewrap.com/wp-content/uploads/2023/10/Ravi-Ahuja-Chairman-Global-Television-Studios-Sony-Pictures-Entertainment-Corporate-Development-1-scaled.jpg?resize=1024%2C683&ssl=1"
+                    name="Edward Menicheschi"
+                    position="President & COO, TheWrap"
+                />
+                <SpeakersCard
+                    img="https://i0.wp.com/www.thewrap.com/wp-content/uploads/2023/10/Daniela-Rus-Director-Computer-Science-AI-Laboratory-MIT-scaled.jpg?resize=1024%2C683&ssl=1"
+                    name="Edward Menicheschi"
+                    position="President & COO, TheWrap"
+                />
+                <SpeakersCard
+                    img="https://i0.wp.com/www.thewrap.com/wp-content/uploads/2023/10/Beth-Anderson-SVP-GM-FAST-Channels-BBC-Studios-scaled.jpg?resize=1024%2C683&ssl=1"
+                    name="Edward Menicheschi"
+                    position="President & COO, TheWrap"
+                />
+                <SpeakersCard
+                    img="https://i0.wp.com/www.thewrap.com/wp-content/uploads/2023/10/Ravi-Ahuja-Chairman-Global-Television-Studios-Sony-Pictures-Entertainment-Corporate-Development-1-scaled.jpg?resize=1024%2C683&ssl=1"
+                    name="Edward Menicheschi"
+                    position="President & COO, TheWrap"
+                />
+            </div>
+        </div>
+    </div>
+    <!-- table -->
+    <div class="bg-[#E0F4FF] p-[25px] md:p-[50px]">
+        <div>
+            <h3 class="font-medium text-[32px] text-center mb-5">
+                A Comprehensive Overview of Pricing Structures
+            </h3>
+        </div>
+        <div class="overflow-x-scroll">
+            <table class="table-top-blue">
+                <tbody>
+                    <tr>
+                        <th class="">Category</th>
+
+                        <th class="">Up to 31/03/2024</th>
+                        <th class="">Up to 30/06/2024</th>
+                        <th class="">Up to 15/09/2024</th>
+                        <th class="">Spot</th>
+                    </tr>
+                    <tr>
+                        <td class="">Consultant</td>
+
+                        <td>8,000 + 18% GST 1,440 = <span>₹ 9,440</span></td>
+                        <td>9,000 + 18% GST 1,620 = <span>₹ 10,620</span></td>
+                        <td>10,000 + 18% GST 1,800 = <span>₹ 11,800</span></td>
+                        <td>12,000 + 18% GST 2,160 = <span>₹ 14,160</span></td>
+                    </tr>
+                    <tr>
+                        <td class="">Post Graduate</td>
+
+                        <td>7000 + 18% GST 1,260 = <span>₹ 8,260</span></td>
+                        <td>8,000 + 18% GST 1,440 = <span>₹ 9,440</span></td>
+                        <td>9,000 + 18% GST 1,620 = <span>₹ 10,620</span></td>
+                        <td>11,000 + 18% GST 1,980 = <span>₹ 12,980</span></td>
+                    </tr>
+                    <tr>
+                        <td class="">Above 70 years</td>
+
+                        <td>4,000 + 18% GST 720 = <span>₹ 4,720</span></td>
+                        <td>4,500 + 18% GST 810 = <span>₹ 5,310</span></td>
+                        <td>5,000 + 18% GST 900 = <span>₹ 5,900</span></td>
+                        <td>6,000 + 18% GST 1,080 = <span>₹ 7,080</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- organization -->
+    <div class="">
+        <div class="bg-white p-[50px] relative">
+            <div class="mb-10">
+                <h3 class="font-black text-[39px] text-center mb-5">
+                    Organization Team
+                </h3>
+                <p class="text-[18px] text-center">
+                    Unite with our expert team shaping excellence at Kentcon
+                    2024.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-5 justify-center">
+                <OurTeamCard
+                    img="https://img.freepik.com/premium-photo/covid-19-coronavirus-outbreak-healthcare-workers-pandemic-concept-middle-aged-doctor-white-coat-cross-arms-chest-ready-help-patients-prescribe-medication-smiling-cheerful_1258-61179.jpg"
+                    name="Dr.Name"
+                    position="Position"
+                />
+                <OurTeamCard
+                    img="https://img.freepik.com/free-photo/young-woman-doctor-white-coat-with-stethoscope-smiling-confident-standing-with-arms-crossed-white-wall_141793-47701.jpg?size=626&ext=jpg&uid=R124523355&ga=GA1.1.1666716393.1699440809&semt=ais"
+                    name="Dr.Name"
+                    position="Position"
+                />
+                <OurTeamCard
+                    img="https://img.freepik.com/free-photo/smiling-doctor-with-strethoscope-isolated-grey_651396-974.jpg?size=626&ext=jpg&uid=R124523355&ga=GA1.1.1666716393.1699440809&semt=ais"
+                    name="Dr.Name"
+                    position="Position"
+                />
+                <OurTeamCard
+                    img="https://img.freepik.com/premium-photo/covid-19-coronavirus-outbreak-healthcare-workers-pandemic-concept-middle-aged-doctor-white-coat-cross-arms-chest-ready-help-patients-prescribe-medication-smiling-cheerful_1258-61179.jpg"
+                    name="Dr.Name"
+                    position="Position"
+                />
+                <OurTeamCard
+                    img="https://img.freepik.com/premium-photo/confident-pretty-middle-aged-female-doctor_1262-10444.jpg?size=626&ext=jpg&uid=R124523355&ga=GA1.1.1666716393.1699440809&semt=ais"
+                    name="Dr.Name"
+                    position="Position"
+                />
+            </div>
+        </div>
+    </div>
+    <!-- banner -->
+    <div
+        class="bg-[url('https://healthflex.plethorathemes.com/wp-content/uploads/2013/06/doctor_blue_left.jpg')] py-[50px] md:py-[90px] px-[25px]"
+    >
+        <h3
+            class="font-black text-white text-[32px] md:text-[39px] text-center"
+        >
+            Unleashing the Power of Healing Minds Worldwide
+        </h3>
+        <p class="font-light text-white text-[18px] text-center">
+            Explore the forefront of healthcare evolution at our International
+            Doctors Conference
+        </p>
+        <div class="text-center mt-10">
+            <button
+                class="bg-[white] px-[15px] py-[10px] rounded font-bold text-[18px] mx-auto"
+                >Register Now</button
+            >
+        </div>
+    </div>
+    <!-- end -->
+
+    <script is:inline>
+        const slideshowImages = document.querySelectorAll(
+            ".intro-slideshow img"
+        );
+
+        const nextImageDelay = 5000;
+        let currentImageCounter = 0; // setting a variable to keep track of the current image (slide)
+
+        // slideshowImages[currentImageCounter].style.display = "block";
+        slideshowImages[currentImageCounter].style.opacity = 1;
+
+        setInterval(nextImage, nextImageDelay);
+
+        function nextImage() {
+            // slideshowImages[currentImageCounter].style.display = "none";
+            slideshowImages[currentImageCounter].style.opacity = 0;
+
+            currentImageCounter =
+                (currentImageCounter + 1) % slideshowImages.length;
+
+            // slideshowImages[currentImageCounter].style.display = "block";
+            slideshowImages[currentImageCounter].style.opacity = 1;
+        }
+    </script>
+
+    <script is:inline>
+        function updateCountdown() {
+            var countDownDate = new Date("Sep 23, 2024 10:00:00").getTime();
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("timer").innerHTML = "EXPIRED";
+                return;
+            }
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor(
+                (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            var minutes = Math.floor(
+                (distance % (1000 * 60 * 60)) / (1000 * 60)
+            );
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("timer").innerHTML =
+                days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        }
+
+        // Update the countdown every 1 second
+        var countdownInterval = setInterval(updateCountdown, 1000);
+
+        // Initial call to display the countdown immediately
+        updateCountdown();
+    </script>
+</Layout>

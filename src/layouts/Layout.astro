@@ -1,0 +1,31 @@
+---
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+import "../../src/scss/custom.scss";
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="kentcon" content="kentcon" />
+        <meta name="viewport" content="width=device-width" />
+        <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body class="max-w-[1440px] mx-auto mt-[80px]">
+        <Nav />
+        <slot class="" />
+        <Footer />
+        <script
+            is:inline
+            src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+        ></script>
+    </body>
+</html>

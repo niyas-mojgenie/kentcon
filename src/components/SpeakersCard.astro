@@ -1,0 +1,17 @@
+---
+const { img, name, position } = Astro.props;
+---
+
+<div class="max-w-[250px] hover:scale-105 ease-in duration-300 cursor-pointer">
+    <img
+        class="w-[250px] h-[250px] object-cover object-center rounded-[150px] shadow-lg"
+        src={img}
+        alt=""
+    />
+    <div class="mt-5">
+        <p class="font-black text-[18px] text-center">{name}</p>
+        <p class="font-medium text-[14px] text-center">
+            {position}
+        </p>
+    </div>
+</div>
