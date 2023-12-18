@@ -3,16 +3,18 @@ const { img, name, position } = Astro.props;
 ---
 
 <div
-    class="w-[250px] rounded-b-[25px] hover:scale-105 ease-in duration-300 cursor-pointer"
+    class="w-[250px] rounded-b-[25px] hover:scale-105 ease-in duration-300 cursor-pointer shadow"
 >
     <img
-        class="w-[250px] h-[250px] object-cover rounded-t-[25px] w-full"
+        class="w-[250px] h-[250px] object-cover object-top rounded-t-[25px] w-full"
         src={img}
         alt=""
     />
 
     <div class="bg-[#00000080] p-3 rounded-b-[25px] w-[250px]">
-        <p class="font-black text-[18px] text-center">{name}</p>
+        <p class="font-black text-[18px] text-center whitespace-pre-line">
+            {name}
+        </p>
         <p class="font-medium text-[14px] text-center">{position}</p>
     </div>
 </div>
