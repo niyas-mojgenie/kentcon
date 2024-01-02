@@ -10,7 +10,7 @@ import Nav from "../components/Nav.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="kentcon" content="kentcon" />
@@ -19,7 +19,7 @@ import Nav from "../components/Nav.astro";
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>
-    <body class="max-w-[1440px] mx-auto mt-[80px] lg:mt-[130px]">
+    <body class="max-w-[1440px] mx-auto">
         <Nav />
         <slot class="" />
         <Footer />
