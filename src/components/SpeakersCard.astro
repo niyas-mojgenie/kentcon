@@ -1,5 +1,5 @@
 ---
-const { img, name, position } = Astro.props;
+const { img, name, position, qualification } = Astro.props;
 ---
 
 <div class="max-w-[250px] hover:scale-105 ease-in duration-300 cursor-pointer">
@@ -10,6 +10,10 @@ const { img, name, position } = Astro.props;
     />
     <div class="mt-5">
         <p class="font-black text-[18px] text-center">{name}</p>
+        <p class="font-black text-[14px] text-center text-gray-700">
+            {qualification}
+        </p>
+
         <p class="font-medium text-[14px] text-center">
             {position}
         </p>

@@ -15,12 +15,41 @@ const {} = Astro.props;
                 alt=""
             />
         </a>
+        <a
+            href="/"
+            class="flex items-center space-x-3 rtl:space-x-reverse ml-0 lg:ml-0 md:ml-[-172px] lg:w-[80px] w-[50px] lg:mt-5"
+        >
+            <img
+                class="w-auto"
+                src="/assets/img/png/aoi-logo.png   "
+                alt="aoi-logo"
+            />
+        </a>
+        <button
+            class="lg:hidden block"
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
         <div
-            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            class="items-center justify-between hidden w-full lg:flex lg:w-auto md:order- lg:mt-5"
             id="navbar-sticky"
         >
             <ul
-                class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
+                class="flex flex-col gap-4 p-4 lg:p-0 mt-4 text-center font-medium border border-gray-100 rounded-lg bg-gray-50 lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 md:bg-white"
             >
                 <li>
                     <a
@@ -66,6 +95,7 @@ const {} = Astro.props;
                 </li>
             </ul>
         </div>
+
         <!-- <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button
                 type="button"
